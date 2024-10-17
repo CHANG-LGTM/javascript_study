@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#btn").click(function(){
+            let color = $("h2").css("background-color");
+            let size = $("h2").css("font-size");
+            alert(color+"\n" + size);
+        });
+    });
+    </script>
+</head>
+<body>
+    <h2 style="background-color: yellow; font-size:30px;">제목</h2>
+    <button id="btn">CSS 가져오기</button>
+</body>
+</html>
