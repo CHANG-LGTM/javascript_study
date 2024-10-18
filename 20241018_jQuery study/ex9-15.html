@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("div").find("ul").css("background-color","yellow");
+        $("div").find("li").css("border","solid 2px red");
+        $("div").find("span").css("background-color","skyblue");
+        });
+        </script>
+</head>
+<body>
+    <h2>find()메소드</h2>
+    <div>
+        <ul>
+            <li>항목1</li>
+            <li><span>항목2(span요소)</span></li>
+        </ul>
+        <ul>
+            <li>항목1</li>
+            <li>항목2</li>
+        </ul>
+    </div>
+</body>
+
+</html>

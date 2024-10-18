@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>tabMenu</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(e) {
+    $('#tab_title ul li').click(function() {
+        var num = $(this).index();
+        $('#tab_title ul li').removeClass('active');
+        $(this).addClass('active');
+        
+        $('#tab_content ul li').each(function() {
+            if (num == $(this).index()) {
+                $('#tab_content ul li').hide();
+                $(this).fadeIn();
+            }
+        });
+    });
+	
+    $('#tab_content ul li').hide();
+    $('#tab_content ul li:first').show();
+});
+</script>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+li { list-style:none; }
+#wrap {
+	width:100%;
+	height:554px;
+	background-color:#eee;
+	padding:100px 0;
+}
+#tab_menu {
+	width:1056px;
+	height:354px;
+	background-color:#fff;
+	margin:0 auto;
+}
+#tab_title {
+	height:44px;
+}
+#tab_title ul li {
+	float:left;
+	width:176px;
+	height:44px;
+	border-right:1px solid #666;
+	background-color:#333;
+	color:#fff;
+	line-height:44px;
+	text-align:center;
+}
+#tab_title ul li:last-child { border:none; }
+#tab_title ul li:hover { background-color:#666; }
+#tab_title ul li.active { background-color:#36F; }
+#tab_content {
+	width:1056px;
+	height:300px;
+	line-height:300px;
+	text-align:center;
+	background-color:black;
+	margin-top:10px;
+	position:relative;
+}
+#tab_content ul li {
+	width: 1080px;
+	height: 300px;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex; /* Flexbox 사용 */
+	flex-direction: column; /* 세로 방향으로 정렬 */
+	justify-content: center; /* 수직 가운데 정렬 */
+	align-items: center; /* 수평 가운데 정렬 */
+}
+#tab_content img {
+	max-width: 100%; /* 최대 너비 100%로 설정 */
+	height: auto; /* 비율 유지 */
+	margin-bottom: 20px; /* 이미지와 텍스트 간의 간격 */
+}
+</style>
+</head>
+
+<body>
+	<div id="wrap">
+    	<div id="tab_menu">
+        	<div id="tab_title">
+            	<ul>
+                	<li>사진</li>
+                    <li>공지사항</li>
+                    <li>동영상</li>
+                    <li>기타</li>
+                    <li>기타</li>
+                    <li>기타</li>
+                </ul>
+            </div>
+            
+            <div id="tab_content">
+            	<ul>
+            		<li><br>
+                        <img src="./화면 캡처 2024-10-18 164617.png" alt="설명 텍스트">
+                    </li>
+                    <li>나는 이창현이다~@@@@@@</li>
+                    <li> <video width="600" controls>
+                        <source src="" type="video/mp4"> <!-- 동영상 파일 경로 -->
+                        Your browser does not support the video tag.</li>
+                    <li>Content_05</li>
+                    <li>Content_06</li>
+                </ul>
+            </div>
+        </div><!--tab_menu end-->
+    </div>
+</body>
+</html>
